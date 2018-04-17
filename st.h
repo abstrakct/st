@@ -20,6 +20,11 @@
 #define TRUECOLOR(r,g,b)	(1 << 24 | (r) << 16 | (g) << 8 | (b))
 #define IS_TRUECOL(x)		(1 << 24 & (x))
 
+#define TLINE(y)        ((y) < term.scr ? term.hist[((y) + term.histi - term.scr + histsize + 1) % histsize] : term.line[(y) - term.scr])
+
+
+#define histsize 2500
+
 enum glyph_attribute {
 	ATTR_NULL       = 0,
 	ATTR_BOLD       = 1 << 0,

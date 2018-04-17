@@ -1,6 +1,14 @@
 /* See LICENSE file for copyright and license details. */
 
 /*
+ * function declarations
+ *
+ * some function declarations needed for scrollback functionality.
+ */
+static void kscrollup(const Arg *);
+static void kscrolldown(const Arg *);
+
+/*
  * appearance
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
@@ -167,17 +175,19 @@ static MouseShortcut mshortcuts[] = {
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
-	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
-	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
-	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
+//	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
+//	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
+//	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
+//	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
+//	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
+//	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ TERMMOD,              XK_I,           iso14755,       {.i =  0} },
+	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
+	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
 
 /*

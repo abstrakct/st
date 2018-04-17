@@ -51,6 +51,7 @@ typedef struct {
 #define OPAQUE 0Xff
 #define USE_ARGB (alpha != OPAQUE && opt_embed == NULL)
 
+
 /* function definitions used in config.h */
 static void clipcopy(const Arg *);
 static void clippaste(const Arg *);
@@ -72,6 +73,7 @@ static void zoomreset(const Arg *);
 #define TRUERED(x)		(((x) & 0xff0000) >> 8)
 #define TRUEGREEN(x)		(((x) & 0xff00))
 #define TRUEBLUE(x)		(((x) & 0xff) << 8)
+ 
 
 typedef XftDraw *Draw;
 typedef XftColor Color;
