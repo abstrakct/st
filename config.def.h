@@ -8,6 +8,9 @@
 static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
 static int borderpx = 2;
 
+/* bg opacity */
+static const int alpha = 0xdd;
+
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
@@ -105,6 +108,7 @@ static const char *colorname[] = {
 	"white",
 
 	[255] = 0,
+	"black",
 
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#cccccc",
@@ -117,7 +121,8 @@ static const char *colorname[] = {
  * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
+//unsigned int defaultbg = 0;
+unsigned int defaultbg = 257;
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
