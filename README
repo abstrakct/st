@@ -18,6 +18,10 @@ necessary as root):
 
     make clean install
 
+Configuration
+-------------
+Edit config.h to set various options. Then repeat 'Installation' procedure.
+
 
 Running st
 ----------
