@@ -95,22 +95,22 @@ static const int alpha = 0xdd;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* custom */
+	/* custom, based on gruvbox */
 	"#111111",  /*  0: black    */
 	"#db4b4b",  /*  1: red      */
 	"#08bf63",  /*  2: green    */
-	"#bf7a29",  /*  3: yellow   */
+	"#d79921",  /*  3: yellow   */
 	"#6a8c8c",  /*  4: blue     */
 	"#856774",  /*  5: magenta  */
-	"#757978",  /*  6: cyan     */
+	"#83a598",  /*  6: cyan     */
 	"#bcbcaf",  /*  7: white    */
 	"#000000",  /*  8: brblack  */
-	"#ae837a",  /*  9: brred    */
+	"#cc241d",  /*  9: brred    */
 	"#b4aa30",  /* 10: brgreen  */
-	"#c7a551",  /* 11: bryellow */
-	"#ffffff",  /* 12: brblue   */
-	"#9c818e",  /* 13: brmagenta*/
-	"#9fa590",  /* 14: brcyan   */
+	"#fabd2f",  /* 11: bryellow */
+	"#458588",  /* 12: brblue   */
+	"#b16286",  /* 13: brmagenta*/
+	"#83a598",  /* 14: brcyan   */
 	"#c1c4bc",  /* 15: brwhite  */
 	"black",
 	[255] = 0,
@@ -124,10 +124,10 @@ static const char *colorname[] = {
  * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 7;
+unsigned int defaultbg = 8;
+static unsigned int defaultcs  = 15;
+static unsigned int defaultrcs = 8;
 //unsigned int defaultbg = 0;
-unsigned int defaultbg = 257;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
 
 /*
  * Default shape of cursor
