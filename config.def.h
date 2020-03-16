@@ -71,7 +71,8 @@ static unsigned int cursorthickness = 2;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+//char *termname = "st-256color";
+char *termname = "xterm-256color";
 
 /*
  * spaces per tab
@@ -91,40 +92,78 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-static const int alpha = 0xdd;
+static const int alpha = 0xFF;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* custom, based on gruvbox */
-	"#111111",  /*  0: black    */
-	"#db4b4b",  /*  1: red      */
-	"#08bf63",  /*  2: green    */
+	/* gruvbox */
+	"#282828",  /*  0: black    */
+	"#cc241d",  /*  1: red      */
+	"#98971a",  /*  2: green    */
 	"#d79921",  /*  3: yellow   */
-	"#6a8c8c",  /*  4: blue     */
-	"#856774",  /*  5: magenta  */
-	"#83a598",  /*  6: cyan     */
-	"#bcbcaf",  /*  7: white    */
-	"#000000",  /*  8: brblack  */
-	"#cc241d",  /*  9: brred    */
-	"#b4aa30",  /* 10: brgreen  */
+	"#458588",  /*  4: blue     */
+	"#b16286",  /*  5: magenta  */
+	"#689d6a",  /*  6: cyan     */
+	"#a89984",  /*  7: white    */
+	"#928374",  /*  8: brblack  */
+	"#fb4934",  /*  9: brred    */
+	"#b8bb26",  /* 10: brgreen  */
 	"#fabd2f",  /* 11: bryellow */
-	"#458588",  /* 12: brblue   */
-	"#b16286",  /* 13: brmagenta*/
-	"#83a598",  /* 14: brcyan   */
-	"#c1c4bc",  /* 15: brwhite  */
+	"#83a598",  /* 12: brblue   */
+	"#d3869b",  /* 13: brmagenta*/
+	"#8ec07c",  /* 14: brcyan   */
+	"#ebdbb2",  /* 15: brwhite  */
 	"black",
-	[255] = 0,
 	"#cccccc",
 	"#000000",
+	[166] = "#d65d0e",  // orange
+	[208] = "#fe8019",  // orange
+	[223] = "#ebdbb2",  // fg1
+	[229] = "#fbf1c7",  // fg0
+	[234] = "#1d2021",  // bg0_h
+	[235] = "#282828",  // bg0
+	[236] = "#32302f",  // bg0_s
+	[237] = "#3c3836",  // bg1
+	[239] = "#504945",  // bg2
+	[241] = "#665c54",  // bg3
+	[243] = "#7c6f64",  // bg4
+	[245] = "#928374",  // gray
+	[246] = "#a89984",  // fg4
+	[248] = "#bdae93",  // fg3
+	[250] = "#d5c4a1",  // fg2
+	[255] = 0,
 };
+//static const char *colorname[] = {
+//	/* custom, based on gruvbox */
+//	"#111111",  /*  0: black    */
+//	"#db4b4b",  /*  1: red      */
+//	"#08bf63",  /*  2: green    */
+//	"#d79921",  /*  3: yellow   */
+//	"#6a8c8c",  /*  4: blue     */
+//	"#856774",  /*  5: magenta  */
+//	"#83a598",  /*  6: cyan     */
+//	"#bcbcaf",  /*  7: white    */
+//	"#000000",  /*  8: brblack  */
+//	"#cc241d",  /*  9: brred    */
+//	"#b4aa30",  /* 10: brgreen  */
+//	"#fabd2f",  /* 11: bryellow */
+//	"#458588",  /* 12: brblue   */
+//	"#b16286",  /* 13: brmagenta*/
+//	"#83a598",  /* 14: brcyan   */
+//	"#c1c4bc",  /* 15: brwhite  */
+//	"black",
+//	[255] = 0,
+//	"#cccccc",
+//	"#000000",
+//};
 
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 8;
+unsigned int defaultfg = 15;
+unsigned int defaultbg = 0;
 static unsigned int defaultcs  = 15;
 static unsigned int defaultrcs = 8;
 //unsigned int defaultbg = 0;
