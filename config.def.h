@@ -13,7 +13,7 @@ extern void kscrolldown(const Arg *);
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-char *font = "xos4 Terminess Powerline:pixelsize=11:antialias=true:autohint=true";
+char *font = "xos4 Terminess Powerline:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
